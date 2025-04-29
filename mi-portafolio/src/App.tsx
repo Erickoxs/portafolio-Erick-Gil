@@ -4,6 +4,8 @@ import './App.css'; // Asegúrate de que el archivo CSS esté importado
 import Home from './pages/home';
 import Projects from './pages/Projects';
 import SocialLinks from './components/SocialLinks';
+import LanguageToggle from './components/toggleLanguage';
+import { LanguageProvider } from './hooks/LanguagueContext';
 
 const App: React.FC = () => {
   return (
@@ -13,12 +15,16 @@ const App: React.FC = () => {
         <div className="background-animated"></div>
 
         <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects/>}/>
-          </Routes>
-
-          <SocialLinks/>
+          {/* Envuelve los componentes que necesitan acceder al contexto LanguageProvider */}
+          <LanguageProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+            </Routes>
+            {/* El LanguageToggle ahora está dentro del proveedor y puede acceder al contexto */}
+            <LanguageToggle />
+          </LanguageProvider>
+          <SocialLinks />
         </div>
       </div>
     </Router>

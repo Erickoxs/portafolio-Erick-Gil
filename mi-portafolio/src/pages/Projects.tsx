@@ -1,30 +1,48 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import { useLanguage } from "../hooks/LanguagueContext"; // Importa el hook de contexto
 
-const projects = [
-  {
-    title: "E-commerce de Camisetas",
-    description: "Tienda en línea para camisetas de fútbol con carrito de compras.",
-    image: "https://camisetasfutbolsorpresa.myshopify.com/es/products/caja-camiseta-futbol-sorpresa",
-    link: "https://proyecto-practicas-1.onrender.com",
+// Traducciones estáticas
+const translations = {
+  es: {
+    title: "Proyectos",
+    eCommerce: {
+      title: "E-commerce de Camisetas",
+      description: "Tienda en línea para camisetas de fútbol con carrito de compras.",
+    },
+    taskManager: {
+      title: "Gestor de Tareas",
+      description: "Aplicación para organizar tareas y mejorar la productividad.",
+    },
+    eventPlatform: {
+      title: "Plataforma de Eventos",
+      description: "Sistema para gestionar eventos con inscripción en línea.",
+    },
   },
-  {
-    title: "Gestor de Tareas",
-    description: "Aplicación para organizar tareas y mejorar la productividad.",
-    image: "https://www.inabaweb.com/las-10-mejores-herramientas-para-la-gestion-de-tareas/",
-    link: "https://ejercicio-tecnico-1.onrender.com",
+  en: {
+    title: "Projects",
+    eCommerce: {
+      title: "Football Jersey E-commerce",
+      description: "Online store for football jerseys with a shopping cart.",
+    },
+    taskManager: {
+      title: "Task Manager",
+      description: "Application to organize tasks and boost productivity.",
+    },
+    eventPlatform: {
+      title: "Event Platform",
+      description: "System to manage events with online registration.",
+    },
   },
-  {
-    title: "Plataforma de Eventos",
-    description: "Sistema para gestionar eventos con inscripción en línea.",
-    image: "https://www.clicksvipcabine.com.br/plataforma-360/",
-    link: "https://gestion-de-eventos-1vri.onrender.com",
-  },
-];
+};
 
 const Projects: React.FC = () => {
   const [showOverlay, setShowOverlay] = useState(false);
+  const { englishMode } = useLanguage(); // Usamos el estado global de englishMode
+
+  // Obtener las traducciones según el idioma actual
+  const { title, eCommerce, taskManager, eventPlatform } = englishMode ? translations.en : translations.es;
 
   const handleBackClick = () => {
     setShowOverlay(true);
@@ -33,6 +51,27 @@ const Projects: React.FC = () => {
       window.location.href = "/";
     }, 500);
   };
+
+  const projects = [
+    {
+      title: eCommerce.title,
+      description: eCommerce.description,
+      image: "https://camisetasfutbolsorpresa.myshopify.com/es/products/caja-camiseta-futbol-sorpresa",
+      link: "https://proyecto-practicas-1.onrender.com",
+    },
+    {
+      title: taskManager.title,
+      description: taskManager.description,
+      image: "https://www.inabaweb.com/las-10-mejores-herramientas-para-la-gestion-de-tareas/",
+      link: "https://ejercicio-tecnico-1.onrender.com",
+    },
+    {
+      title: eventPlatform.title,
+      description: eventPlatform.description,
+      image: "https://www.clicksvipcabine.com.br/plataforma-360/",
+      link: "https://gestion-de-eventos-1vri.onrender.com",
+    },
+  ];
 
   return (
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
@@ -43,7 +82,7 @@ const Projects: React.FC = () => {
         <ArrowLeft size={24} />
       </button>
       
-      <h2 className="text-4xl font-bold text-[#f5f5f5] mb-12 text-center">Proyectos</h2>
+      <h2 className="text-4xl font-bold text-[#f5f5f5] mb-12 text-center">{title}</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
         {projects.map((project, index) => (

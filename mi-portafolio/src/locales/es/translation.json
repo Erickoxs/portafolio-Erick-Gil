@@ -1,0 +1,17 @@
+{
+    "hero": {
+      "welcome": "¡Bienvenido a mi portafolio!",
+      "description": "Soy un desarrollador Full Stack, apasionado por crear soluciones eficientes y escalables. Tengo habilidades en JavaScript, TypeScript, React, Node.js y bases de datos relacionales y NoSQL.",
+      "viewProjects": "Ver mis proyectos"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "ecommerceTitle": "E-commerce de Camisetas de Fútbol",
+      "ecommerceDescription": "Tienda en línea para camisetas de fútbol con carrito de compras.",
+      "taskManagerTitle": "Gestor de Tareas",
+      "taskManagerDescription": "Aplicación para organizar tareas y mejorar la productividad.",
+      "eventPlatformTitle": "Plataforma de Eventos",
+      "eventPlatformDescription": "Sistema para gestionar eventos con inscripción en línea."
+    }
+  }
+  
