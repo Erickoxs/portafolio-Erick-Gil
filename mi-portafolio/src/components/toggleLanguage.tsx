@@ -6,7 +6,7 @@ const LanguageToggle: React.FC = () => {
 
   const flags: { [key: string]: string } = {
     "true": "/colombia.png", // Bandera de Colombia para inglés
-    "false": "/usa.png", // Bandera de USA para español
+    "false": "/USA.png", // Bandera de USA para español
   };
 
   return (
