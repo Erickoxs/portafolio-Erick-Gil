@@ -1,17 +1,19 @@
 {
-    "hero": {
-      "welcome": "Welcome to my Portfolio!",
-      "description": "I’m a Full Stack developer, passionate about creating efficient and scalable solutions. I have skills in JavaScript, TypeScript, React, Node.js, and relational and NoSQL databases.",
-      "viewProjects": "View my projects"
-    },
-    "projects": {
-      "title": "Projects",
-      "ecommerceTitle": "Football Jersey E-commerce",
-      "ecommerceDescription": "Online store for football jerseys with a shopping cart.",
-      "taskManagerTitle": "Task Manager",
-      "taskManagerDescription": "Application to organize tasks and boost productivity.",
-      "eventPlatformTitle": "Event Platform",
-      "eventPlatformDescription": "System to manage events with online registration."
-    }
+  "hero": {
+    "welcome": "Welcome to my portfolio!",
+    "description": "I'm a Full Stack developer passionate about building efficient and scalable solutions. I have skills in JavaScript, TypeScript, React, Node.js, and both relational and NoSQL databases.",
+    "viewProjects": "View my projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "ecommerceTitle": "Football Jersey E-commerce",
+    "ecommerceDescription": "Online store for football jerseys with a shopping cart.",
+    "taskManagerTitle": "Task Manager",
+    "taskManagerDescription": "Application to organize tasks and boost productivity.",
+    "eventPlatformTitle": "Event Platform",
+    "eventPlatformDescription": "System to manage events with online registration.",
+    
+    "sportmingleTitle": "SportMingle",
+    "sportmingleDescription": "Platform to organize informal matches, tournaments, and sports clubs."
   }
-  
+}

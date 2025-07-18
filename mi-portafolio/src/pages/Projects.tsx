@@ -19,6 +19,10 @@ const translations = {
       title: "Plataforma de Eventos",
       description: "Sistema para gestionar eventos con inscripción en línea.",
     },
+    sportMingle: {
+      title: "SportMingle",
+      description: "Plataforma para organizar partidos, torneos y clubes deportivos.",
+    },
   },
   en: {
     title: "Projects",
@@ -34,6 +38,10 @@ const translations = {
       title: "Event Platform",
       description: "System to manage events with online registration.",
     },
+    sportMingle: {
+      title: "SportMingle",
+      description: "Platform to organize matches, tournaments, and sports clubs.",
+    },
   },
 };
 
@@ -42,7 +50,9 @@ const Projects: React.FC = () => {
   const { englishMode } = useLanguage(); // Usamos el estado global de englishMode
 
   // Obtener las traducciones según el idioma actual
-  const { title, eCommerce, taskManager, eventPlatform } = englishMode ? translations.en : translations.es;
+ const { title, eCommerce, taskManager, eventPlatform, sportMingle } = englishMode
+  ? translations.en
+  : translations.es;
 
   const handleBackClick = () => {
     setShowOverlay(true);
@@ -71,6 +81,12 @@ const Projects: React.FC = () => {
       image: "https://www.clicksvipcabine.com.br/plataforma-360/",
       link: "https://gestion-de-eventos-1vri.onrender.com",
     },
+    {
+  title: sportMingle.title,
+  description: sportMingle.description,
+  image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Soccer_ball_animated.svg", // Cambia por una mejor si tienes
+  link: "https://sportmingle-frontend.onrender.com", // Usa el link correcto
+}
   ];
 
   return (
