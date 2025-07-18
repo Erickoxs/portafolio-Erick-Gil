@@ -64,6 +64,12 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+  title: sportMingle.title,
+  description: sportMingle.description,
+  image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Soccer_ball_animated.svg", // Cambia por una mejor si tienes
+  link: "https://sportmingle-1.onrender.com/", // Usa el link correcto
+},
+    {
       title: eCommerce.title,
       description: eCommerce.description,
       image: "https://camisetasfutbolsorpresa.myshopify.com/es/products/caja-camiseta-futbol-sorpresa",
@@ -81,12 +87,7 @@ const Projects: React.FC = () => {
       image: "https://www.clicksvipcabine.com.br/plataforma-360/",
       link: "https://gestion-de-eventos-1vri.onrender.com",
     },
-    {
-  title: sportMingle.title,
-  description: sportMingle.description,
-  image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Soccer_ball_animated.svg", // Cambia por una mejor si tienes
-  link: "https://sportmingle-frontend.onrender.com", // Usa el link correcto
-}
+    
   ];
 
   return (
